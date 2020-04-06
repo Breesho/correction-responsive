@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partie Responsive - Exercice 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!-- Il s'agit juste de l'image de l'énoncé -->
+    <img src="img/enonce.PNG" alt="Image de l'énoncé" title="Enoncé de l'exercice">
+    <hr>
+    <!-- Il s'agit juste de l'image de l'énoncé -->
+
+
+    <!-- Je vais sur la doc officiel bootstrap pour les cards : https://getbootstrap.com/docs/4.4/components/card/ -->
+        <div class="container">
+        <!-- J'utilise la classe : justify-content-center pour centrer mon contenu -->
+        <div class="row justify-content-center">
+            <!-- Nous indiquons la larger de la colonne : Ici 4 -->
+            <div class="col-sm-4">
+                <!-- J'utilise la class shadow pour mettre de l'ombre sur la card -->
+                <div class="shadow card">
+                    <!-- Nous personnalisons le body de la card avec des paragraphes p et un button -->
+                    <div class="card-body text-center">
+                        <p class="h4">La Manu Le Havre</p>
+                        <p>L'Ecole des métiers du Numérique</p>
+                        <!-- bouton qui va appeler notre modal via data-toggle et data-target -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            data-target="#modalLamanuWebsite">
+                            + d'infos
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Je me sers du code donné en exemple sur le site officiel de Bootstrap : https://getbootstrap.com/docs/4.4/components/modal/ -->
+    <!-- Je pense bien à à créer une modal dont l'id aura la même nom que le data-target : #modalLamanuWebsite -->
+    <div class="modal fade" id="modalLamanuWebsite" tabindex="-1" role="dialog" aria-labelledby="modalLamanuWebsite"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <!-- On va pouvoir customiser le contenu de notre modal : modal-content -->
+            <div class="modal-content">
+                <!-- Nous allons modifier le header et laisser le bouton de dismiss : la croix -->
+                <div class="modal-header">
+                    <p class="modal-title h5" id="exampleModalLabel">La Manu Le Havre</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!-- Puis nous allons modifier le body pour rajouter le lien vers le site de la manu du Havre -->
+                <div class="modal-body text-center bg-primary">
+                    <a class="text-white" href="https://lamanu.fr/campus/le-havre-formation-continue-initiale/"
+                        title="Lien vers le site de la Manu du Havre">https//lamanu.fr/le-havre</a>
+                </div>
+                <!-- Mise en place d'un bouton explicite pour fermer la modal : Au final facultatif car nous avions deja mis un bouton dans le header -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">&times; Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+</body>
+
+</html>
